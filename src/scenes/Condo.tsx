@@ -1,18 +1,19 @@
 import React, {useEffect} from 'react';
-import {main} from "./condos";
+import {renderCondoScene} from "./condos";
 
 export const Condo = () => {
 
   useEffect(() => {
-
     const canvas = document.querySelector<HTMLCanvasElement>("#canvas")!;
-    main(canvas);
+
+    // Errors while rendering condos (createView function has an error)
+    // renderCondoScene(canvas);
   }, []);
 
   return (
       <>
-        <h1>Hello</h1>
-      <canvas id="canvas"></canvas>
+        <h1>Novorender Test</h1>
+        <canvas id="canvas"></canvas>
       </>
   );
 }
